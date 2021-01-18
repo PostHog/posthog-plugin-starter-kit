@@ -1,6 +1,7 @@
 {
     "private": true,
     "name": "posthog-plugin-hello-world",
+    "displayName": "Hello World",
     "version": "1.0.0",
     "description": "Greet the world with every PostHog event!",
     "keywords": [
@@ -8,7 +9,6 @@
         "plugin"
     ],
     "main": "dist/index.js",
-    "types": "dist/index.d.ts",
     "repository": "github:PostHog/posthog-plugin-hello-world",
     "bugs": {
         "url": "https://github.com/PostHog/posthog-plugin-hello-world/issues"

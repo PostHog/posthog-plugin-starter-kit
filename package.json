@@ -58,6 +58,6 @@
     },
     "lint-staged": {
         "*.{ts,tsx,js,jsx,json,yaml,toml,css,scss,html,xml}": "prettier --write",
-        "*.{ts,tsx}": "tsc --noEmit"
+        "*.{ts,tsx}": "tsc --lib esnext --noEmit"
     }
 }

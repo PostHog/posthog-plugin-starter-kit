@@ -1,31 +1,15 @@
-# PostHog Template for the Next TypeScript Package
+# Hello World – a PostHog Plugin
 
-[![npm package](https://img.shields.io/npm/v/♦️♦️♦️SET-YOUR-OWN-PACKAGE-NAME-HERE♦️♦️♦️?style=flat-square)](https://www.npmjs.com/package/♦️♦️♦️SET-YOUR-OWN-PACKAGE-NAME-HERE♦️♦️♦️)
+[![npm package](https://img.shields.io/npm/v/posthog-plugin-hello-world?style=flat-square)](https://www.npmjs.com/package/posthog-plugin-hello-world)
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-> Hey there! Starting a new JS/TS package?
->
-> Whether it's a library, a plugin, an integration, a CLI, or anything else in the world:
->
-> -   Write it in TypeScript for best reliability and development experience.
-> -   Use the battle-tested Yarn for dependency management.
-> -   Test quickly and easily with Jest (plus `ts-jest` for TypeScript support).
-> -   Adhere to PostHog Style™️ by formatting code with Prettier and ensuring best practices with ESLint
->     – or actually, don't do it: let pre-commit hooks handle this for you.
-> -   Have GitHub Actions run all of the above when working on pull requests. Plus have them take care of publishing releases on npm and GitHub whenever the version is incremented.
->
-> Start out using this template and hit the ground quickly with all of the above from the get-go.
->
-> ## Get on with it
->
-> 1. Update fields `name`, `description`, `keywords`, `respository`, `bugs` and `homepage` in `package.json`.
-> 2. Make sure that you have Yarn installed and run `yarn` to install dependencies.  
->    Note: file `yarn.lock` will be created. Commit this.
-> 3. Write your package, starting with `src/index.ts`!
->
-> _When publishing on GitHub, add an automation-type npm access token as GitHub secret `NPM_TOKEN` in order for auto-release to work._
+This is an exemplary PostHog plugin. It adds property `"greeting"` to every event with a configurable value – `"Hello world!"` by default.
 
-_Now, erase the notes above and fill this README with something actually relevant! Don't forget to update the npm badge too._
+A few goodies included with this plugin:
+-   TypeScript for best reliability and development experience,
+-   Jest for convenient testing,
+-   Prettier and ESLint for code style and best practices – both handled by pre-commit hooks,
+-   GitHub Actions set up to run code quality and functionality tests in pull requests, and also to publish a new npm release when the package version is incremented in `main` (the latter requires an automation type npm access token to be set with a repo secret `NPM_TOKEN`).
 
 ## Questions?
 

@@ -5,6 +5,7 @@ module.exports = {
     ignorePatterns: ['bin', 'dist', 'node_modules'],
     rules: {
         '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
         curly: 'error',
     },
 }

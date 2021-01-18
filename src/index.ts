@@ -6,13 +6,14 @@ declare function fetch(url: RequestInfo, init?: RequestInit): Promise<Response>
 /** The famed Hello World plugin itself. */
 const helloWorld: Plugin = {
     setupPlugin: async ({ config }) => {
-        console.log('Setting up the plugin!')
-        console.log(config)
+        console.log(`Setting up the plugin:\n${config.greeting}`)
     },
     processEvent: async (event, { config, cache }) => {
         const counterValue = (await cache.get('greeting_counter', 0)) as number
         cache.set('greeting_counter', counterValue + 1)
-        if (!event.properties) event.properties = {}
+        if (!event.properties) {
+            event.properties = {}
+        }
         event.properties['greeting'] = config.greeting
         event.properties['greeting_counter'] = counterValue
         event.properties['random'] = await fetchTrulyRandomInteger()

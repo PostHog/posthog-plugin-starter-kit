@@ -1,10 +1,10 @@
 import { Plugin } from '@posthog/plugin-scaffold'
 import type { RequestInfo, RequestInit, Response } from 'node-fetch'
 
-/** fetch only declared, as it's provided as a plugin VM global. */
+// fetch only declared, as it's provided as a plugin VM global
 declare function fetch(url: RequestInfo, init?: RequestInit): Promise<Response>
 
-/** Internal library function. */
+// Internal library function
 async function fetchTrulyRandomInteger(): Promise<number> {
     const response = await fetch(
         'https://www.random.org/integers/?num=1&min=1&max=1000000000&col=1&base=10&format=plain&rnd=new'
@@ -13,7 +13,7 @@ async function fetchTrulyRandomInteger(): Promise<number> {
     return integer
 }
 
-/** The famed Hello World plugin itself. */
+// The famed Hello World plugin itself
 const helloWorld: Plugin = {
     setupPlugin: async ({ config }) => {
         console.log(`Setting up the plugin:\n${config.greeting}`)

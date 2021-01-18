@@ -1,8 +1,4 @@
 import { Plugin } from '@posthog/plugin-scaffold'
-import type { RequestInfo, RequestInit, Response } from 'node-fetch'
-
-/** fetch only declared, as it's provided as a plugin VM global. */
-declare function fetch(url: RequestInfo, init?: RequestInit): Promise<Response>
 
 /** Internal library function. */
 async function fetchTrulyRandomInteger(): Promise<number> {

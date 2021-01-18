@@ -41,11 +41,11 @@ jobs:
 
             - name: Install dependencies
               if: steps.version.outputs.IS_NEW_VERSION == 'true'
-              run: yarn --frozen-lockfile
+              run: npm ci
 
             - name: Publish the package in the npm registry
               if: steps.version.outputs.IS_NEW_VERSION == 'true'
-              run: yarn publish --access public
+              run: npm publish --access public
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
@@ -69,6 +69,6 @@ jobs:
 
             # - name: Publish the package in the GitHub registry
             #   if: steps.version.outputs.IS_NEW_VERSION == 'true'
-            #   run: yarn publish --access public
+            #   run: npm publish --access public
             #   env:
             #       NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

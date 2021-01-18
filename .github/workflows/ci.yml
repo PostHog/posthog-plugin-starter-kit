@@ -17,10 +17,10 @@ jobs:
                   node-version: 14
 
             - name: Install dependencies
-              run: yarn
+              run: npm ci
 
             - name: Run unit tests
-              run: yarn test
+              run: npm run test
 
     code-quality:
         name: Code quality
@@ -35,10 +35,10 @@ jobs:
                   node-version: 14
 
             - name: Install dependencies
-              run: yarn
+              run: npm ci
 
             - name: Lint
-              run: yarn lint
+              run: npm run lint
 
     build:
         name: Build
@@ -53,7 +53,7 @@ jobs:
                   node-version: 14
 
             - name: Install dependencies
-              run: yarn --frozen-lockfile
+              run: npm ci
 
             - name: Build the package
-              run: yarn build
+              run: npm run build

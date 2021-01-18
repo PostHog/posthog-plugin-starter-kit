@@ -1,29 +1,32 @@
 {
     "private": true,
-    "name": "♦️♦️♦️SET-YOUR-OWN-PACKAGE-NAME-HERE♦️♦️♦️",
+    "name": "posthog-plugin-hello-world",
     "version": "1.0.0",
-    "description": "♦️♦️♦️SET-YOUR-OWN-DESCRIPTION-HERE♦️♦️♦️",
+    "description": "Greet the world with every PostHog event!",
     "keywords": [
-        "♦️♦️♦️",
-        "SET",
-        "YOUR",
-        "OWN",
-        "KEYWORDS",
-        "HERE",
-        "♦️♦️♦️"
+        "posthog",
+        "plugin"
     ],
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
-    "repository": "github:PostHog/♦️♦️♦️SET-YOUR-OWN-REPOSITORY-NAME-HERE♦️♦️♦️",
+    "repository": "github:PostHog/posthog-plugin-hello-world",
     "bugs": {
-        "url": "https://github.com/PostHog/♦️♦️♦️SET-YOUR-OWN-REPOSITORY-NAME-HERE♦️♦️♦️/issues"
+        "url": "https://github.com/PostHog/posthog-plugin-hello-world/issues"
     },
-    "homepage": "https://github.com/PostHog/♦️♦️♦️SET-YOUR-OWN-REPOSITORY-NAME-HERE♦️♦️♦️#readme",
+    "homepage": "https://github.com/PostHog/posthog-plugin-hello-world#readme",
     "author": "PostHog <hey@posthog.com>",
     "license": "MIT",
+    "configSchema": {
+        "greeting": {
+            "name": "What greeting would you like to use?",
+            "type": "string",
+            "default": "Hello world!",
+            "required": false
+        }
+    },
     "scripts": {
         "test": "jest src",
-        "build": "yarn clean && yarn compile",
+        "build": "npm run clean && npm run compile",
         "clean": "rimraf dist/*",
         "purge": "rimraf dist node_modules",
         "compile": "tsc",
@@ -31,10 +34,12 @@
         "lint:fix": "eslint --fix .",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
-        "prepublishOnly": "yarn test && yarn build"
+        "prepublishOnly": "npm run test && npm run build"
     },
     "devDependencies": {
+        "@posthog/plugin-scaffold": "0.2.8-alpha.2",
         "@types/jest": "^26.0.19",
+        "@types/node-fetch": "^2.5.8",
         "@typescript-eslint/eslint-plugin": "^4.12.0",
         "@typescript-eslint/parser": "^4.12.0",
         "eslint": "^7.0.0",

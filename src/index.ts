@@ -1,7 +1,17 @@
 import { Plugin } from '@posthog/plugin-scaffold'
 import type { RequestInfo, RequestInit, Response } from 'node-fetch'
 
+/** fetch only declared, as it's provided as a plugin VM global. */
 declare function fetch(url: RequestInfo, init?: RequestInit): Promise<Response>
+
+/** Internal library function. */
+async function fetchTrulyRandomInteger(): Promise<number> {
+    const response = await fetch(
+        'https://www.random.org/integers/?num=1&min=1&max=1000000000&col=1&base=10&format=plain&rnd=new'
+    )
+    const integer = parseInt(await response.text())
+    return integer
+}
 
 /** The famed Hello World plugin itself. */
 const helloWorld: Plugin = {
@@ -21,13 +31,4 @@ const helloWorld: Plugin = {
     },
 }
 
-module.exports = helloWorld
-
-/** Internal library function. */
-async function fetchTrulyRandomInteger(): Promise<number> {
-    const response = await fetch(
-        'https://www.random.org/integers/?num=1&min=1&max=1000000000&col=1&base=10&format=plain&rnd=new'
-    )
-    const integer = parseInt(await response.text())
-    return integer
-}
+export = helloWorld

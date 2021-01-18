@@ -20,7 +20,7 @@ const helloWorld: Plugin = {
     },
 }
 
-export default helloWorld
+module.exports = helloWorld
 
 /** Internal library function. */
 async function fetchTrulyRandomInteger(): Promise<number> {

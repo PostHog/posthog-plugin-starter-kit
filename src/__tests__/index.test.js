@@ -2,14 +2,7 @@ const { createEvent, createIdentify, getMeta, resetMeta, clone } = require('@pos
 
 const { processEvent } = require('..')
 
-global.fetch = jest.fn(() =>
-    Promise.resolve({
-        text: () => Promise.resolve(80805),
-    })
-)
-
 beforeEach(() => {
-    fetch.mockClear()
     resetMeta({
         config: {
             greeting: 'Dzień dobry!',
@@ -29,7 +22,7 @@ test('processEvent adds properties', async () => {
             ...event0.properties,
             greeting: 'Dzień dobry!',
             greeting_counter: 0,
-            random: 80805,
+            random_number: 4,
         },
     })
 
@@ -53,10 +46,15 @@ test('processEvent adds properties', async () => {
 })
 
 test('processEvent does not crash with identify', async () => {
+    const defaultHelloWorldProperties = Object.freeze({
+        greeting: 'Dzień dobry!',
+        greeting_counter: 0,
+        random_number: 4,
+    })
     // create a random event
     const event0 = createIdentify()
-
     // must clone the event since `processEvent` will mutate it otherwise
-    const event1 = await processEvent(clone(event0), getMeta())
-    expect(event1).toEqual({ ...event0, greeting: 'Dzień dobry!', greeting_counter: 0, random: 80805 })
+    const { properties, ...restOfEvent1 } = await processEvent(clone(event0), getMeta())
+    expect(restOfEvent1).toEqual(event0)
+    expect(properties).toEqual(defaultHelloWorldProperties)
 })

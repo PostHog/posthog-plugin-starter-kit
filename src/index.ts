@@ -1,7 +1,9 @@
+import './global'
 import { Plugin } from '@posthog/plugin-scaffold'
 
-/** Internal library function. */
-async function fetchTrulyRandomInteger(): Promise<number> {
+// Some internal library function
+async function getRandomNumber(): Promise<number> {
+    return 4 // remove this line to get an actual random number from random.org – caution, rate limited to 10 events/s!
     const response = await fetch(
         'https://www.random.org/integers/?num=1&min=1&max=1000000000&col=1&base=10&format=plain&rnd=new'
     )
@@ -9,7 +11,7 @@ async function fetchTrulyRandomInteger(): Promise<number> {
     return integer
 }
 
-/** The famed Hello World plugin itself. */
+// The famed Hello World plugin itself
 const helloWorld: Plugin = {
     setupPlugin: async ({ config }) => {
         console.log(`Setting up the plugin:\n${config.greeting}`)
@@ -22,7 +24,7 @@ const helloWorld: Plugin = {
         }
         event.properties['greeting'] = config.greeting
         event.properties['greeting_counter'] = counterValue
-        event.properties['random'] = await fetchTrulyRandomInteger()
+        event.properties['random_number'] = await getRandomNumber()
         return event
     },
 }

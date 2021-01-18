@@ -1,5 +1,4 @@
 {
-    "private": true,
     "name": "posthog-plugin-hello-world",
     "displayName": "Hello World",
     "version": "1.0.0",

@@ -4,8 +4,9 @@ import type { RequestInfo, RequestInit, Response } from 'node-fetch'
 // fetch only declared, as it's provided as a plugin VM global
 declare function fetch(url: RequestInfo, init?: RequestInit): Promise<Response>
 
-// Internal library function
-async function fetchTrulyRandomInteger(): Promise<number> {
+// Some internal library function
+async function getRandomNumber(): Promise<number> {
+    return 4 // remove this line to get an actual random number from random.org – caution, rate limited to 10 events/s!
     const response = await fetch(
         'https://www.random.org/integers/?num=1&min=1&max=1000000000&col=1&base=10&format=plain&rnd=new'
     )
@@ -26,7 +27,7 @@ const helloWorld: Plugin = {
         }
         event.properties['greeting'] = config.greeting
         event.properties['greeting_counter'] = counterValue
-        event.properties['random'] = await fetchTrulyRandomInteger()
+        event.properties['random_number'] = await getRandomNumber()
         return event
     },
 }

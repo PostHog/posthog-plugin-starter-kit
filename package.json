@@ -1,0 +1,58 @@
+{
+    "private": true,
+    "name": "♦️♦️♦️SET-YOUR-OWN-PACKAGE-NAME-HERE♦️♦️♦️",
+    "version": "1.0.0",
+    "description": "♦️♦️♦️SET-YOUR-OWN-DESCRIPTION-HERE♦️♦️♦️",
+    "keywords": [
+        "♦️♦️♦️",
+        "SET",
+        "YOUR",
+        "OWN",
+        "KEYWORDS",
+        "HERE",
+        "♦️♦️♦️"
+    ],
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "repository": "github:PostHog/♦️♦️♦️SET-YOUR-OWN-REPOSITORY-NAME-HERE♦️♦️♦️",
+    "bugs": {
+        "url": "https://github.com/PostHog/♦️♦️♦️SET-YOUR-OWN-REPOSITORY-NAME-HERE♦️♦️♦️/issues"
+    },
+    "homepage": "https://github.com/PostHog/♦️♦️♦️SET-YOUR-OWN-REPOSITORY-NAME-HERE♦️♦️♦️#readme",
+    "author": "PostHog <hey@posthog.com>",
+    "license": "MIT",
+    "scripts": {
+        "test": "jest src",
+        "build": "yarn clean && yarn compile",
+        "clean": "rimraf dist/*",
+        "purge": "rimraf dist node_modules",
+        "compile": "tsc",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "prepublishOnly": "yarn test && yarn build"
+    },
+    "devDependencies": {
+        "@types/jest": "^26.0.19",
+        "@typescript-eslint/eslint-plugin": "^4.12.0",
+        "@typescript-eslint/parser": "^4.12.0",
+        "eslint": "^7.0.0",
+        "husky": "~4.3.6",
+        "jest": "^26.6.3",
+        "lint-staged": "~10.5.3",
+        "prettier": "^2.2.1",
+        "rimraf": "^3.0.2",
+        "ts-jest": "^26.4.4",
+        "typescript": "^4.1.3"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{ts,tsx,js,jsx,json,yaml,toml,css,scss,html,xml}": "prettier --write",
+        "*.{ts,tsx}": "tsc --noEmit"
+    }
+}

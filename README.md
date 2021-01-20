@@ -7,7 +7,7 @@ This is an exemplary PostHog plugin. It adds property `"greeting"` to every even
 
 Feel free to use it as a base for your own plugins!
 
-Want something with batteries included? Check out [PostHog Plugin Advanced Kit](https://github.com/PostHog/posthog-plugin-advanced-kit) – TypeScript, Jest, Prettier, ESLint.
+Want something with batteries included? Check out [PostHog Plugin Advanced Kit](https://github.com/PostHog/posthog-plugin-advanced-kit) – TypeScript, Jest, Prettier, ESLint from the get-go.
 
 ## Installation
 

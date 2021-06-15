@@ -9,8 +9,6 @@ Feel free to use it as a base for your own plugins!
 
 Need more information on developing plugins? Check out [the Plugins Overview](https://posthog.com/docs/plugins/build/overview)
 
-Want something with batteries included? Check out [PostHog Plugin Advanced Kit](https://github.com/PostHog/posthog-plugin-advanced-kit) – TypeScript, Jest, Prettier, ESLint from the get-go.
-
 ## Installation
 
 1. Open PostHog.

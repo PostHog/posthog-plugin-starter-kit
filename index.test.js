@@ -1,6 +1,6 @@
 const { createEvent, createIdentify, getMeta, resetMeta, clone } = require("@posthog/plugin-scaffold/test/utils");
 
-const { processEvent } = require(".");
+const { processEvent } = require("./index");
 
 beforeEach(() => {
     resetMeta({

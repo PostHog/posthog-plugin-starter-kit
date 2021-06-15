@@ -1,0 +1,16 @@
+{
+    "name": "Hello World",
+    "url": "<Your Plugin URL here>",
+    "description": "<Your Plugin description here>",
+    "main": "index.js",
+    "posthogVersion": ">= 1.25.0",
+    "config": [
+        {
+            "key": "greeting",
+            "name": "What greeting would you like to use?",
+            "type": "string",
+            "default": "Hello World!",
+            "required": false
+        }
+    ]
+}

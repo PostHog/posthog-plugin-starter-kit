@@ -7,14 +7,17 @@ This is an exemplary PostHog plugin. It adds property `"greeting"` to every even
 
 Feel free to use it as a base for your own plugins!
 
+Need more information on developing plugins? Check out [the Plugins Overview](https://posthog.com/docs/plugins/build/overview)
+
 Want something with batteries included? Check out [PostHog Plugin Advanced Kit](https://github.com/PostHog/posthog-plugin-advanced-kit) – TypeScript, Jest, Prettier, ESLint from the get-go.
 
 ## Installation
 
 1. Open PostHog.
 1. Head to the Plugins page from the sidebar.
-1. Either install Hello World from Available plugins, or install from URL using this repository's URL.
+1. Install from URL using this repository's URL.
 
+More information in [the Plugins Tutorial](https://posthog.com/docs/plugins/build/tutorial)
 ## Questions?
 
 ### [Join our Slack community.](https://join.slack.com/t/posthogusers/shared_invite/enQtOTY0MzU5NjAwMDY3LTc2MWQ0OTZlNjhkODk3ZDI3NDVjMDE1YjgxY2I4ZjI4MzJhZmVmNjJkN2NmMGJmMzc2N2U3Yjc3ZjI5NGFlZDQ)

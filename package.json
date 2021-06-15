@@ -15,14 +15,6 @@
     "homepage": "https://github.com/PostHog/posthog-plugin-starter-kit#readme",
     "author": "PostHog <hey@posthog.com>",
     "license": "MIT",
-    "configSchema": {
-        "greeting": {
-            "name": "What greeting would you like to use?",
-            "type": "string",
-            "default": "Hello world!",
-            "required": false
-        }
-    },
     "scripts": {
         "test": "jest ."
     },

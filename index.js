@@ -6,12 +6,12 @@ async function getRandomNumber() {
 }
 
 // Plugin method that runs on plugin load
-async function setupPlugin({ config }) {
+export async function setupPlugin({ config }) {
     console.log(`Setting up the plugin`)
 }
 
 // Plugin method that processes event
-async function processEvent(event, { config, cache }) {
+export async function processEvent(event, { config, cache }) {
     const counterValue = (await cache.get('greeting_counter', 0))
     cache.set('greeting_counter', counterValue + 1)
     if (!event.properties) event.properties = {}
@@ -19,10 +19,4 @@ async function processEvent(event, { config, cache }) {
     event.properties['greeting_counter'] = counterValue
     event.properties['random_number'] = await getRandomNumber()
     return event
-}
-
-// The plugin itself
-module.exports = {
-    setupPlugin,
-    processEvent
 }

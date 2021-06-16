@@ -3,6 +3,7 @@ const { createEvent, createIdentify, getMeta, resetMeta, clone } = require("@pos
 const { processEvent } = require("./index");
 
 beforeEach(() => {
+    // Making sure plugin meta has our custom test config
     resetMeta({
         config: {
             greeting: "Dzień dobry!",
@@ -11,10 +12,10 @@ beforeEach(() => {
 });
 
 test("processEvent adds properties", async () => {
-    // create a random event
+    // Create a random event
     const event0 = createEvent({ event: "booking completed", properties: { amount: "20", currency: "USD" } });
 
-    // must clone the event since `processEvent` will mutate it otherwise
+    // Must clone the event since `processEvent` will mutate it
     const event1 = await processEvent(clone(event0), getMeta());
     expect(event1).toEqual({
         ...event0,
@@ -51,9 +52,9 @@ test("processEvent does not crash with identify", async () => {
         greeting_counter: 0,
         random_number: 4,
     });
-    // create a random event
+    // Create a random event
     const event0 = createIdentify();
-    // must clone the event since `processEvent` will mutate it otherwise
+    // Must clone the event since `processEvent` will mutate it
     const { properties, ...restOfEvent1 } = await processEvent(clone(event0), getMeta());
     expect(restOfEvent1).toEqual(event0);
     expect(properties).toEqual(defaultHelloWorldProperties);

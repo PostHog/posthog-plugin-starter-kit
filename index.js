@@ -1,4 +1,4 @@
-//<TODO: your plugin code here>
+// <TODO: your plugin code here - you can base it on the code below, but you don't have to>
 
 // Some internal library function
 async function getRandomNumber() {

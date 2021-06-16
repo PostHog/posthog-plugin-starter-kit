@@ -1,3 +1,5 @@
+//<TODO: your plugin code here>
+
 // Some internal library function
 async function getRandomNumber() {
     return 4 // remove this line to get an actual random number from random.org – caution, rate limited to 10 events/s!

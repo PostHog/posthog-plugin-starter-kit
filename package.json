@@ -15,6 +15,9 @@
     "homepage": "https://github.com/PostHog/posthog-plugin-starter-kit#readme",
     "author": "PostHog <hey@posthog.com>",
     "license": "MIT",
+    "jest": {
+        "testEnvironment": "node"
+    },
     "scripts": {
         "test": "jest ."
     },

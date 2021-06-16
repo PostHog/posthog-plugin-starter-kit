@@ -7,6 +7,8 @@ This is an exemplary PostHog plugin. It adds property `"greeting"` to every even
 
 Feel free to use it as a base for your own plugins!
 
+You can also add a `logo.png` file to give this plugin its own logo.
+
 Need more information on developing plugins? Check out [the Plugins Overview](https://posthog.com/docs/plugins/build/overview)
 
 ## Installation

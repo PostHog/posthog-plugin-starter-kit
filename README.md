@@ -10,7 +10,7 @@ Feel free to use it as a base for your own plugins!
 
 All of the plugin's code is located in the `index.js` file, which is JavaScript ran inside of PostHog.
 To get yourself up to speed with this environment, we sincerely recommend checking out our [Plugins overview in PostHog Docs]([the Plugins Overview](https://posthog.com/docs/plugins/build/overview).
-For a crash course, check out our [plugin building tutorial in PostHog Docs](https://posthog.com/docs/plugins/build/tutorial).
+For a crash course, read our [plugin building tutorial in PostHog Docs](https://posthog.com/docs/plugins/build/tutorial).
 
 ## How to test
 

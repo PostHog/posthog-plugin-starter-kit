@@ -2,17 +2,15 @@
 
 // Some internal library function
 async function getRandomNumber() {
-    return 4 // remove this line to get an actual random number from random.org – caution, rate limited to 10 events/s!
-    const response = await fetch(
-        'https://www.random.org/integers/?num=1&min=1&max=1000000000&col=1&base=10&format=plain&rnd=new'
-    )
-    return parseInt(await response.text())
+    return 4
 }
 
+// Plugin method that runs on plugin load
 async function setupPlugin({ config }) {
-    console.log(`Setting up the plugin:\n${config.greeting}`)
+    console.log(`Setting up the plugin`)
 }
 
+// Plugin method that processes event
 async function processEvent(event, { config, cache }) {
     const counterValue = (await cache.get('greeting_counter', 0))
     cache.set('greeting_counter', counterValue + 1)
@@ -23,7 +21,7 @@ async function processEvent(event, { config, cache }) {
     return event
 }
 
-// The famed Hello World plugin itself
+// The plugin itself
 module.exports = {
     setupPlugin,
     processEvent

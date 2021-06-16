@@ -1,31 +1,33 @@
 # PostHog Plugin Starter Kit
 
-[![npm package](https://img.shields.io/npm/v/posthog-plugin-hello-world?style=flat-square)](https://www.npmjs.com/package/posthog-plugin-hello-world)
 [![License: MIT](https://img.shields.io/badge/License-MIT-red.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
-This is a template for PostHog plugins. The existing sample code adds property `"greeting"` to every event with a configurable value (by default: `"Hello world!"`).
+This is a PostHog plugin template.
 
-To make this template your own:
-- [ ] Add your code to `index.js`
-- [ ] Add your configuration and metadata to `plugin.json`
+The existing sample code adds property `"greeting"` to every event with a configurable value (default: `"Hello world!"`).  
+But that is just to help you get started! To make it your own:
+- [ ] Add your own code to `index.js`.
+- [ ] Add your own metadat and configuration schema to `plugin.json`.
+- [ ] Search for `<TODO:`, make sure none are left!
 - [ ] Optional: Add a `logo.png` file to give this plugin its own logo.
-- [ ] Search for `<TODO:`, make sure none exist
 
 If you're looking for inspiration, here are a few exemplary plugins:
 
-1. Basic usage, local development, and testing: [The Hello World Plugin](https://github.com/PostHog/helloworldplugin)
-2. Working with multiple files, publishing to npm: [The GeoIP Plugin](https://github.com/PostHog/maxmind-plugin)
-3. Exporting to data store, full Typescript support: [The S3 Export Plugin](https://github.com/PostHog/s3-export-plugin)
+1. [Hello World](https://github.com/PostHog/helloworldplugin) – basic event processing, with tests
+1. [S3 Export](https://github.com/PostHog/s3-export-plugin) – event export using the AWS SDK, with TypeScript
+1. [GeoIP](https://github.com/PostHog/posthog-plugin-geoip) – advanced event processing using the GeoIP feature, with tests, formatting, linting, TypeScript, and GitHub Actions CI
+1. [PagerDuty](https://github.com/PostHog/posthog-pagerduty-plugin) – periodic job using external HTTP API access
 
-Need more information on developing plugins? Check out [the Plugins Overview](https://posthog.com/docs/plugins/build/overview)
+To get up to speed with the environment of plugins, check out [our Plugins overview in PostHog Docs](https://posthog.com/docs/plugins/build/overview).  
+For a crash course, read [the Plugins tutorial in PostHog Docs](https://posthog.com/docs/plugins/build/tutorial).
 
 ## Installation
 
 1. Open PostHog.
-1. Head to the Plugins page from the sidebar.
-1. Install from URL using this repository's URL.
+1. Go to the Plugins page from the sidebar.
+1. Head to the Advanced tab.
+1. "Install from GitHub, GitLab or npm" using this repository's URL.
 
-More information in [the Plugins Tutorial](https://posthog.com/docs/plugins/build/tutorial)
 ## Questions?
 
 ### [Join our Slack community.](https://join.slack.com/t/posthogusers/shared_invite/enQtOTY0MzU5NjAwMDY3LTc2MWQ0OTZlNjhkODk3ZDI3NDVjMDE1YjgxY2I4ZjI4MzJhZmVmNjJkN2NmMGJmMzc2N2U3Yjc3ZjI5NGFlZDQ)

@@ -6,8 +6,8 @@ This is a PostHog plugin template.
 
 The existing sample code adds property `"greeting"` to every event with a configurable value (default: `"Hello world!"`).  
 But that is just to help you get started! To make it your own:
-- [ ] Add your own code to `index.js`.
-- [ ] Add your own metadat and configuration schema to `plugin.json`.
+- [ ] Add your code to `index.js`.
+- [ ] Add your metadata and configuration schema to `plugin.json`.
 - [ ] Search for `<TODO:`, make sure none are left!
 - [ ] Optional: Add a `logo.png` file to give this plugin its own logo.
 

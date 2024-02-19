@@ -12,7 +12,7 @@ But that is just to help you get started! To make it your own:
 - [ ] Optional: Add a `logo.png` file to give this plugin its own logo.
 - [ ] Create a README.MD for your plugin which follows [our documentation guidelines](https://posthog.com/docs/plugins/build). 
 
-If you're looking for inspiration, then check out plugins source code from [data pipelines](https://posthog.com/docs/cdp).
+If you're looking for inspiration, then check out existing plugins and their source code from [data pipelines](https://posthog.com/docs/cdp).
 
 To get up to speed with the environment of plugins, check out [our Plugins overview in PostHog Docs](https://posthog.com/docs/plugins/build/overview).
 
@@ -29,4 +29,4 @@ When you're done, you can submit your plugin to our integration library so that 
 
 To submit your plugin, use the support option in PostHog Cloud.
 
-We'll review the plugin to ensure it's secure, performant, and adheres to best practices and isn't already accomplisahable by other ways. Then, we add it to our official repository and make it available for everyone to use!
+We'll review the plugin to ensure it's secure, performant, adheres to best practices and isn't already doing something that can be accomplished by other means. Then we'll add it to our official repository and make it available for everyone to use!

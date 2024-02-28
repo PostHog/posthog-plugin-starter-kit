@@ -12,7 +12,7 @@ But that is just to help you get started! To make it your own:
 - [ ] Optional: Add a `logo.png` file to give this plugin its own logo.
 - [ ] Create a README.MD for your plugin which follows [our documentation guidelines](https://posthog.com/docs/plugins/build). 
 
-If you're looking for inspiration, then check out existing plugins and their source code from [data pipelines](https://posthog.com/docs/cdp).
+If you're looking for inspiration, then check out [url normalizer transformation](https://github.com/PostHog/posthog-url-normalizer-plugin) or [compose webhook destination](https://github.com/PostHog/webhook-plugin)
 
 To get up to speed with the environment of plugins, check out [our Plugins overview in PostHog Docs](https://posthog.com/docs/plugins/build/overview).
 
